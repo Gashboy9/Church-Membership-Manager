@@ -21,14 +21,14 @@ public abstract class Person {
 	String membership_status = "visitor";
 	String fellowship;
 	int attendance_count;
-	static int record_count ;
-	
+	static int record_count = 0;
 	
 	static {
 		record_count++;
 	}
 	
 	public void set_membership_ID() {
+
 		membership_ID = record_count;
 	}
 	public int get_membership_ID() {
