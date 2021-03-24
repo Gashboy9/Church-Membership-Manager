@@ -1,8 +1,12 @@
 package management;
 
+import java.util.Scanner;
 import java.util.Date;
 
 public abstract class Person {
+	
+	Scanner scan = new Scanner (System.in);
+
 	
 	String name;
 	Date date_of_birth;
@@ -17,7 +21,7 @@ public abstract class Person {
 	String membership_status = "visitor";
 	String fellowship;
 	int attendance_count;
-	static int record_count = 0;
+	static int record_count ;
 	
 	
 	static {
@@ -95,8 +99,21 @@ public abstract class Person {
 	
 	public abstract void last_visit();
 	
+	public int select_option() {
+		System.out.println("Select Option: ");
+		System.out.println("1. Enter record: ");
+		System.out.println("2. View record: ");
+		System.out.println("3. Edit record: ");
+		int option = scan.nextInt();
+		
+		return option;
+	}
 	
 	//public abstract void days_Since_Joined();
+	
+	public String toString() {
+		return "Membership ID: "+membership_ID+ " Name: "+name+ " Date of birth: "+date_of_birth+ " Email: "+email+ " Phone number: "+phone_number +" Fellowship: "+fellowship;
+	}
 	
 
 }
