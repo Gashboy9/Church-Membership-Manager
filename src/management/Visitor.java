@@ -2,7 +2,6 @@ package management;
 
 public class Visitor extends Person {
 	
-
 	Visitor(){
 		membership_status = "Visitor";
 	}

@@ -17,7 +17,7 @@ public abstract class Person {
 	double contributions;
 	int people_invited;
 	int membership_ID;
-	String membership_status = "visitor";
+	String membership_status;
 	String fellowship;
 	static int attendance_count = 0;
 	static int record_count = 0;
@@ -93,7 +93,7 @@ public abstract class Person {
 	
 	public void set_fellowship(String fellowship) {
 		this.fellowship = fellowship;
-	}
+	} 
 	
 	//public abstract void calculate_age();
 	
@@ -127,6 +127,24 @@ public abstract class Person {
 		
 		return option;
 	}
+	
+//	public int select_field_option() {
+//		System.out.println("Which field would you like to edit: ");
+//		System.out.println("1. Name: ");
+//		System.out.println("2. Date of birth: ");
+//		System.out.println("3. Email: ");
+//		System.out.println("4. Phone number: ");
+//		System.out.println("5. Location: ");
+//		System.out.println("6. Health status: ");
+//		System.out.println("7. Job status: ");
+//		System.out.println("8. Contribution: ");
+//		System.out.println("9. people invited: ");
+//		System.out.println("10. Membership status: ");
+//		System.out.println("11. Fellowship: ");
+//		int option = scan.nextInt();
+//		
+//		return option;
+//	}
 	
 	//public abstract void days_Since_Joined();
 	
