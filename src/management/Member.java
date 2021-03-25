@@ -2,8 +2,15 @@ package management;
 
 public class Member extends Person {
 	
-	Member[] mem;
+	Member(){
+		
+	}
 	
+
+	Member(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public void set_date() {

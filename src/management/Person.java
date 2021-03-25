@@ -9,7 +9,7 @@ public abstract class Person {
 
 	
 	String name;
-	Date date_of_birth;
+	String date_of_birth;
 	String email;
 	String phone_number;
 	String location;
@@ -22,6 +22,14 @@ public abstract class Person {
 	String fellowship;
 	int attendance_count;
 	static int record_count = 0;
+	
+	Person(){
+		
+	}
+	
+	Person(String name){
+		this.name = name;
+	}
 	
 	static {
 		record_count++;

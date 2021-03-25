@@ -2,7 +2,15 @@ package management;
 
 public class Visitor extends Person {
 	
-	String [] vis;
+
+	Visitor(){
+		
+	}
+	
+	Visitor(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public void set_date() {
