@@ -39,7 +39,7 @@ public class Manager1 {
 
 			else if (p.select_option() == 3) {
 //				System.out.println("Select Membership ID: ");
-//				int mid = scan.nextShort();
+//				
 //				
 //				if (p.membership_ID == mid) {
 //					System.out.println("Which field would you like to edit");
@@ -47,9 +47,13 @@ public class Manager1 {
 //					
 //					int val = scan.nextInt();
 
-				System.out.println("Select record");
+				System.out.print("Select record using Membership ID: ");
+				int mid = scan.nextShort();
+				System.out.println(persons.get(mid-1));
+				
+				System.out.println("Which field would you like to edit: ");
+				System.out.print("1. Name");
 
-				System.out.println(persons.get(2-1));
 
 			}
 
