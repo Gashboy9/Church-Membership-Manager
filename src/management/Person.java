@@ -51,6 +51,7 @@ public abstract class Person {
 		this.name = name;
 	}
 	
+	
 	public void set_date_of_birth(String date_of_birth) {
 		this.date_of_birth = date_of_birth;
 	}
@@ -67,12 +68,24 @@ public abstract class Person {
 		this.location = location;
 	}
 	
+	public String get_location() {
+		return location;
+	}
+	
 	public void set_health_status(String health_status) {
 		this.health_status = health_status;
 	}
 	
+	public String get_health_status() {
+		return health_status;
+	}
+	
 	public void set_job_status(String job_status) {
 		this.job_status = job_status;
+	}
+	
+	public String get_job_status() {
+		return job_status;
 	}
 	
 	public void set_contribution(double contribution) {
@@ -114,6 +127,7 @@ public abstract class Person {
 		System.out.println("1. Enter record: ");
 		System.out.println("2. View record: ");
 		System.out.println("3. Edit record: ");
+		System.out.println("4. View extra record: ");
 		int option = scan.nextInt();
 		
 		return option;

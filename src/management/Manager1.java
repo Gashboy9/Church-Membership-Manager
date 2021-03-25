@@ -193,6 +193,45 @@ public class Manager1 {
 
 				
 			}
+			
+			//other records
+			else if (p.select_option() == 4) {
+				System.out.print("Select extra record using Membership ID: ");
+				int mid = scan.nextInt();
+				System.out.println(members.get(mid-1));
+				
+				System.out.println("Which field would you like to edit: ");
+				System.out.println("1. Location: ");
+				System.out.println("2. Health status: ");
+				System.out.println("3. Job status: ");
+				System.out.println("4. Contribution: ");
+				System.out.println("5. People invited: ");
+				
+				int field = scan.nextInt();
+				
+				if (field == 1) {
+					System.out.print("Location is: ");
+					System.out.println(members.get(mid-1).get_location());
+					System.out.println("------------------ ");
+				}else if (field == 2) {
+					System.out.print("Health status is: ");
+					System.out.println(members.get(mid-1).get_health_status());
+					System.out.println("------------------ ");
+				}else if (field == 3) {
+					System.out.print("Job status is: ");
+					System.out.println(members.get(mid-1).get_health_status());
+					System.out.println("------------------ ");
+				}else if (field == 4) {
+					System.out.print("Contribution: ");
+					System.out.println(members.get(mid-1).get_contribution());
+					System.out.println("------------------ ");
+				}else if (field == 5) {
+					System.out.print("Number of people invited: ");
+					System.out.println(members.get(mid-1).get_people_invited());
+					System.out.println("------------------ ");
+				}
+				
+			}
 
 		}
 

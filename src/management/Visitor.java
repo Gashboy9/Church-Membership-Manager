@@ -7,7 +7,7 @@ public class Visitor extends Person {
 	}
 
 	public String toString() {
-		return super.toString() + " Membership status:"+ membership_status;
+		return super.toString() + " Membership status: "+ membership_status;
 	}
 
 }
