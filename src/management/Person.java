@@ -1,12 +1,11 @@
 package management;
 
 import java.util.Scanner;
-import java.util.Date;
+//import java.util.Date;
 
 public abstract class Person {
 	
 	Scanner scan = new Scanner (System.in);
-
 	
 	String name;
 	String date_of_birth;
@@ -20,14 +19,12 @@ public abstract class Person {
 	int membership_ID;
 	String membership_status = "visitor";
 	String fellowship;
-	int attendance_count;
+	static int attendance_count = 0;
 	static int record_count = 0;
 	
 	Person(){
 		
 	}
-	
-
 	
 	static {
 		record_count++;
@@ -50,12 +47,13 @@ public abstract class Person {
 		return attendance_count;
 	}
 	
-	
 	public void set_name(String name) {
 		this.name = name;
 	}
 	
-	public abstract void set_date();
+	public void set_date_of_birth(String date_of_birth) {
+		this.date_of_birth = date_of_birth;
+	}
 	
 	public void set_email(String email) {
 		this.email = email;
@@ -86,16 +84,18 @@ public abstract class Person {
 	}
 	
 	public void set_people_invited(int people_invited) {
-		this.people_invited = people_invited;
+		this.people_invited += people_invited;
+	}
+	
+	public int get_people_invited() {
+		return this.people_invited;
 	}
 	
 	public void set_fellowship(String fellowship) {
 		this.fellowship = fellowship;
 	}
 	
-	public abstract void calculate_age();
-	
-	public abstract void calculate_people_invited();
+	//public abstract void calculate_age();
 	
 	public void membership_status() {
 		if (attendance_count >=3) {
@@ -103,13 +103,26 @@ public abstract class Person {
 		}
 	}
 	
-	public abstract void last_visit();
+	public void set_membership_status(String membership_status) {
+		this.membership_status = membership_status;
+	}
+	
+	//public abstract void last_visit();
 	
 	public int select_option() {
 		System.out.println("Select Option: ");
 		System.out.println("1. Enter record: ");
 		System.out.println("2. View record: ");
 		System.out.println("3. Edit record: ");
+		int option = scan.nextInt();
+		
+		return option;
+	}
+	
+	public int select_initial_option() {
+		System.out.println("Select visitor or member: ");
+		System.out.println("1. for visitor: ");
+		System.out.println("2. for member: ");
 		int option = scan.nextInt();
 		
 		return option;
