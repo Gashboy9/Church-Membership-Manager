@@ -27,9 +27,7 @@ public abstract class Person {
 		
 	}
 	
-	Person(String name){
-		this.name = name;
-	}
+
 	
 	static {
 		record_count++;

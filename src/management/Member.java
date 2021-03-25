@@ -3,13 +3,7 @@ package management;
 public class Member extends Person {
 	
 	Member(){
-		
-	}
-	
-
-	Member(String name) {
-		super(name);
-		// TODO Auto-generated constructor stub
+		membership_status = "Member";
 	}
 
 	@Override

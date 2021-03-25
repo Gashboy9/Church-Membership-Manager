@@ -52,9 +52,43 @@ public class Manager1 {
 				System.out.println(persons.get(mid-1));
 				
 				System.out.println("Which field would you like to edit: ");
-				System.out.print("1. Name");
+				System.out.println("1. Name: ");
+				System.out.println("2. Date of birth: ");
+				System.out.println("3. Phone number: ");
+				System.out.println("4. Location: ");
+				System.out.println("5. Health status: ");
+				System.out.println("6. Job status: ");
+				System.out.println("7. Contribution: ");
+				System.out.println("8. people invited: ");
+				System.out.println("9. Membership status: ");
+				
+				int field = scan.nextInt();
+				
+				if (field == 1) {
+					System.out.print("Enter new name: ");
+					String new_name = scan.next();
+					persons.get(mid-1).set_name(new_name);
+					System.out.println("Name change successful ");
+					System.out.println("------------------ ");
+				}else if (field == 2) {
+					
+				}else if (field == 3) {
+					
+				}else if (field == 4) {
+					
+				}else if (field == 5) {
+					
+				}else if (field == 6) {
+					
+				}else if (field == 7) {
+					
+				}else if (field == 8) {
+					
+				}else if (field == 9) {
+					
+				}
 
-
+				
 			}
 
 		}
