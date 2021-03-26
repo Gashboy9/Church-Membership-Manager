@@ -134,9 +134,9 @@ public abstract class Person {
 	}
 	
 	public int select_initial_option() {
-		System.out.println("Select visitor or member: ");
-		System.out.println("1. for visitor: ");
-		System.out.println("2. for member: ");
+		System.out.println("Select Member or Visitor: ");
+		System.out.println("1. for members: ");
+		System.out.println("2. for visitors: ");
 		int option = scan.nextInt();
 		
 		return option;
